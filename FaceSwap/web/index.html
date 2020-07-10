@@ -1,0 +1,39 @@
+<!-- https://www.w3docs.com/tools/editor/5793 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Irish Sign Language Detection Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="main-block">
+      <div class="block-item left">
+        <h1>ISL Detection Application</h1>
+        <p><small>The Application allows you to detect the Irish Sign Language by understanding the gestures
+            performed in front of the Camera (Webcam), once the gesture is identified , the word or sentence formed
+            is converted to speech. It uses Deep learning technology to achieve this </small>
+        </p>
+        <div id="val_result" class = 'result'></div>
+        <div id="test_result" class = 'result'></div>
+      </div>
+      <div class="block-item right">
+        <button class="btn hand_detection" onclick="hand_detection()"><i class="far fa-hand-spock"></i><span>Hand Detection</span></button>
+        <button class="btn gesture_generation" onclick="gesture_generation()"><i class="fas fa-diagnoses"></i><span>Gesture generation</span></button>
+        <button class="btn generate_flips" onclick="gesture_flips()"><i class="fab fa-fantasy-flight-games"></i><span>Generate Flips</span></button>
+        <button class="btn dump_model" onclick="dump_model()" id="dumpButton"><i class="far fa-sun"></i><span>Create Train, Test, Validation sets</span></button>
+        <button class="btn train_model" onclick="train_model()" id="trainButton"><i class="fas fa-space-shuttle"></i><span>Train Model</span></button>
+        <button class="btn gesture_detection" onclick="test_model()" id="testButton"><i class="fas fa-vial"></i><span>Test Model</span></button>
+        <button class="btn predict_gesture" onclick="predict_gesture()" id="predictButton"><i class="fas fa-sign-language"></i><span >Predict Gesture</span></button>
+      </div>
+
+    </div>
+
+  </body>
+</html>
