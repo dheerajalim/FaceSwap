@@ -1,10 +1,118 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html>
+  <head>
+    <title>Settings</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="css/settings_style.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    </head>
+    <body onload="load_settings()">
+    <div class="block-item">
+
+
+                <!-- Form Name -->
+                <legend>Settings</legend>
+
+                <!-- File Button -->
+                <div class="form-group">
+
+                 <div class="col-md-4">
+
+                        <div id="error" name="error" class="error"><span></span></div>
+
+                  </div>
+                  <label class="col-md-4 control-label" for="face_location">Swap Face</label>
+                  <div class="col-md-4">
+                <!--    <input id="face_location" name="face_location" class="input-file" type="file">-->
+                        <button id="face_location" onclick="face_location_path()" name="face_location" class="btn btn-primary">Choose File</button>
+                        <div ><span id="face_location_path_value" name="face_location_path_value"></span></div>
+
+                  </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="dlibmodel">dlib Model</label>
+                  <div class="col-md-6">
+                    <select id="dlibmodel" name="dlibmodel" class="form-control">
+                      <option value="shape_predictor_68_face_landmarks.dat">shape_predictor_68_face_landmarks</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" >Save Image</label>
+                  <div class="col-md-4">
+                    <label class="radio-inline" for="saveimage-1">
+                      <input type="radio" onclick="javascript:yesnoCheck('saveimage-1','imagedir','image_output_dir');" name="saveimage" id="saveimage-1" value="1" >
+                      Yes
+                    </label>
+                    <label class="radio-inline" for="saveimage-0">
+                      <input type="radio" onclick="javascript:yesnoCheck('saveimage-1','imagedir','image_output_dir');" name="saveimage" id="saveimage-0" value="0" checked="checked">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+
+                <div class="form-group" id="imagedir" style="display: none">
+                  <label class="col-md-4 control-label" for="image_output_dir">Image Dir</label>
+                  <div class="col-md-4">
+
+                      <button id="image_output_dir" onclick="output_dir('image_output_dir_path_value')" name="image_output_dir" class="btn btn-primary">Choose Directory</button>
+                        <div><span id="image_output_dir_path_value" name="image_output_dir_path_value"></span></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-4 control-label" >Save Video</label>
+                  <div class="col-md-4">
+                    <label class="radio-inline" for="savevideo-1">
+                      <input type="radio" onclick="javascript:yesnoCheck('savevideo-1','videodir','video_output_dir');" name="savevideo" id="savevideo-1" value="1" >
+                      Yes
+                    </label>
+                    <label class="radio-inline" for="savevideo-0">
+                      <input type="radio" onclick="javascript:yesnoCheck('savevideo-1','videodir','video_output_dir');" name="savevideo" id="savevideo-0" value="0" checked="checked">
+                      No
+                    </label>
+                  </div>
+                </div>
+
+
+                <!-- File Button -->
+                <div class="form-group" id="videodir" style="display: none">
+                  <label class="col-md-4 control-label" for="video_output_dir">Video Dir</label>
+                  <div class="col-md-4">
+
+                      <button id="video_output_dir" onclick="output_dir('video_output_dir_path_value')" name="video_output_dir" class="btn btn-primary">Choose Directory</button>
+                        <div><span id="video_output_dir_path_value" name="video_output_dir_path_value"></span></div>
+                  </div>
+                </div>
+
+                <!-- Button (Double) -->
+                <div class="form-group">
+<!--                  <label class="col-md-4 control-label" for="button1id">Double Button</label>-->
+                  <div class="col-md-8">
+                    <button id="savebtn" onclick="save_settings()" name="button1id" class="btn btn-success">Save</button>
+                    <button id="cancelbtn" onclick="window.history.go(-1); return false;" name="button2id" class="btn btn-danger">Cancel</button>
+                  </div>
+                </div>
+
+
+    </div>
+  </body>
 </html>

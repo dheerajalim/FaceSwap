@@ -5,7 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: lightblue url("bg1.jpg") no-repeat fixed center;
+  background: lightblue url("../images/bg1.jpg") no-repeat fixed center;
 }
 p {
   max-width: 560px;

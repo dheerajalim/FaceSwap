@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<html>
+    <head>
+        <title>Face Swap Application</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+              integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+        <link href="css/options.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </head>
+
+    <body>
+        <div>
+        <button class="button" onclick="faceswap_file('image')"><i class="fas fa-portrait"></i><span> Swap with Image</span></button>
+        <button class="button" onclick="faceswap_file('video')"><i class="fas fa-file-video"></i><span> Swap with Video</span></button>
+        <button class="button" onclick="start_faceswap('webcam')"><i class="fas fa-video"></i><span> Swap with Webcam</span></button>
+        </div>
+
+        <div>
+            <button id="backbtn" onclick="window.history.go(-1); return false;" name="backbtn" class="btn btn-primary backButton">
+                <i class="fas fa-arrow-alt-circle-left"></i><span> Back</span>
+            </button>
+        </div>
+    </body>
