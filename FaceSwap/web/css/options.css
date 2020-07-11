@@ -5,7 +5,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: lightblue url("../images/bg1.jpg") no-repeat fixed center;
+  background: lightblue url("../images/1.jpg") no-repeat fixed center;
 }
 p {
   max-width: 560px;
@@ -18,7 +18,7 @@ p {
 }
 
 .button {
-  background: #2c3354;
+  background: #8a583b59;
   border-radius: 100px;
   padding: 15px 25px;
   color: #fff;
@@ -26,6 +26,7 @@ p {
   font-size: 1.45em;
   margin: 0 15px;
   outline: none;
+  border: none;
 }
 
 /* Hover state animation applied here */

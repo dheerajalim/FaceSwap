@@ -13,12 +13,12 @@ function yesnoCheck(videoradio,videodir,video_output_dir) {
 
 function faceswap_file(source){
 
-    eel.faceswap_file(source)
+    eel.faceswap_file(source);
 
     }
 
 function start_faceswap(source){
-    eel.start_faceswap(source)
+    eel.start_faceswap(source);
         
     }
 
@@ -35,8 +35,7 @@ function settings_page(){
 
 function load_settings() {
      eel.load_settings()(function(saved_values) {
-        console.log(saved_values)
-        console.log(`${saved_values}`);
+
         document.getElementById('face_location_path_value').innerHTML = saved_values[0];
         document.getElementById('image_output_dir_path_value').innerHTML = saved_values[1];
         document.getElementById('dlibmodel').value = saved_values[2];
@@ -64,19 +63,13 @@ function load_settings() {
 
 function save_settings(){
 
-    const face_location_path_value = document.getElementById('face_location_path_value').innerHTML
-    const dlibmodel = document.getElementById('dlibmodel').value
-    const saveimage = document.querySelector('input[name="saveimage"]:checked').value
-    const savevideo = document.querySelector('input[name="savevideo"]:checked').value
-    const image_output_dir_path_value = document.getElementById('image_output_dir_path_value').innerHTML
-    const video_output_dir_path_value = document.getElementById('video_output_dir_path_value').innerHTML
+    const face_location_path_value = document.getElementById('face_location_path_value').innerHTML;
+    const dlibmodel = document.getElementById('dlibmodel').value;
+    const saveimage = document.querySelector('input[name="saveimage"]:checked').value;
+    const savevideo = document.querySelector('input[name="savevideo"]:checked').value;
+    const image_output_dir_path_value = document.getElementById('image_output_dir_path_value').innerHTML;
+    const video_output_dir_path_value = document.getElementById('video_output_dir_path_value').innerHTML;
 
-    console.log(face_location_path_value)
-    console.log(dlibmodel)
-    console.log(saveimage)
-    console.log(savevideo)
-    console.log(image_output_dir_path_value)
-    console.log(video_output_dir_path_value)
 
     if (face_location_path_value.length == 0 ){
         document.getElementById('error').innerHTML = " Please select a swap face file";
@@ -115,7 +108,7 @@ function save_settings(){
     eel.save_settings(face_location_path_value,dlibmodel,image_output_dir_path_value,video_output_dir_path_value, saveimage,savevideo)(
         function(result){
             if (result){
-                window.location.href='index.html'
+                window.location.href='index.html';
             }
         }
     )
@@ -125,8 +118,8 @@ function save_settings(){
 function face_location_path(){
     eel.face_location_path()(function(path)
     {
-        let result = `${path}`
-        console.log(result)
+        let result = `${path}`;
+
         if (result == ""){
             document.getElementById('face_location_path_value').innerHTML = "";
         }
@@ -140,7 +133,7 @@ function face_location_path(){
 function output_dir(path_tag){
     eel.output_dir()(function(path)
     {
-        let result = `${path}`
+        let result = `${path}`;
         if (result ==""){
             document.getElementById(path_tag).innerHTML = "";
         }
