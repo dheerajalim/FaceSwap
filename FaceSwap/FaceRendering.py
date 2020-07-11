@@ -26,7 +26,7 @@ def addTexture(img):
     return textureId
 
 class FaceRenderer:
-    def __init__(self, targetImg, textureImg, textureCoords, mesh):
+    def __init__(self, targetImg, textureImg, textureCoords, mesh, source):
         self.h = targetImg.shape[0]
         self.w = targetImg.shape[1]
 
@@ -45,6 +45,7 @@ class FaceRenderer:
         self.renderTexture = addTexture(targetImg)
 
         self.mesh = mesh
+        self.source = source
 
     def drawFace(self, vertices):
         glBindTexture(GL_TEXTURE_2D, self.faceTexture) 
@@ -68,4 +69,6 @@ class FaceRenderer:
             renderedImg[:, :, i] = np.flipud(renderedImg[:, :, i])
 
         pygame.display.flip()
+        if self.source == 'image':
+            pygame.display.quit()
         return renderedImg
