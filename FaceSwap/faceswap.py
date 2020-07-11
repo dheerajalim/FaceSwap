@@ -65,7 +65,11 @@ def webcamswap(cap,detector, predictor, maxImageSizeForDetection, projectionMode
     lockedTranslation = False
 
     while True:
-        cameraImg = cap.read()[1]
+        ret, cameraImg = cap.read()
+
+        if ret is False:  # checks for the last frame and quits
+            break
+
         shapes2D = utils.getFaceKeypoints(cameraImg, detector, predictor, maxImageSizeForDetection)
 
         if shapes2D is not None:
@@ -117,7 +121,7 @@ def webcamswap(cap,detector, predictor, maxImageSizeForDetection, projectionMode
         # if key == ord('r'):
         if save_video == 1:
             if writer is None:
-                # print "Starting video writer"
+
                 writer = cv2.VideoWriter(output_video_path + "//" + time.strftime("%Y%m%d-%H%M%S") + ".avi",
                                          cv2.VideoWriter_fourcc('X', 'V', 'I', 'D'), 15,
                                          (cameraImg.shape[1], cameraImg.shape[0]))
@@ -128,7 +132,9 @@ def webcamswap(cap,detector, predictor, maxImageSizeForDetection, projectionMode
                     writer = None
                     print("Writer opening failed")
                 save_video = 2
+
     cap.release()
+
 
 def faceswap(source, path = None):
 
