@@ -1,0 +1,12 @@
+.block-item {
+    width: 67%;
+    padding-left: 35%;
+    padding-top: 6%;
+}
+
+.error{
+    color: indianred;
+    padding-bottom: 4%;
+    padding-top: 4%;
+
+}

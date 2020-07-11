@@ -3,6 +3,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
+      background: lightblue url("bg1.jpg") no-repeat fixed center;
       }
       body, div, p {
       padding: 0;
@@ -70,29 +71,9 @@
       font-weight: 500;
       }
 
-      .hand_detection {
+      .face_swap_btn {
       background: #3a589e;
       }
-      .gesture_generation {
+      .settings_btn {
       background: #429cd6;
-      }
-      .gesture_detection{
-      background: #d34836;
-      }
-
-      .generate_flips{
-      background: #8FBC8F;
-      }
-
-      .predict_gesture{
-
-       background: #9370DB ;
-      }
-      .dump_model{
-
-            background: #A0522D;
-      }
-      .train_model{
-
-            background: #DAA520;
       }
