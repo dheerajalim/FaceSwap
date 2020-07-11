@@ -1,27 +1,30 @@
 # FaceSwap #
-FaceSwap is an app that I have originally created as an exercise for my students in "Mathematics in Multimedia" on the Warsaw University of Technology.
-The app is written in Python and uses face alignment, Gauss Newton optimization and image blending to swap the face of a person seen by the camera with a face of a person in a provided image.
 
-You will find a short presentation the program's capabilities in the video below (click to go to YouTube):
-[![click to go to YouTube](http://img.youtube.com/vi/yZRuSsyxvos/0.jpg)](http://www.youtube.com/watch?v=yZRuSsyxvos)
+The FaceSwap app is inspired from the work of @MarekKowalski. This is built using eel to provide a fully functional User Interface
+.The app is written in Python and uses face alignment, Gauss Newton optimization and image blending to swap the face of a person seen by the camera with a face of a person in a provided image.
+
+## Running FaceSwap ##
+$ python start_app.py
 
 ## How to use it ##
-To start the program you will have to run a file named zad2.py (Polish for exercise 2), which will require:
-  * Python 2.7 (I recommend Anaconda)
-  * OpenCV (I used 2.4.13)
+To start the program you will have to run a file named start_app.py , which will require:
+  * Python 3 (worked on 3.6)
+  * OpenCV 
   * Numpy
-  * dlib
-  * pygame
+  * dlib (You might need to install cmake < pip install cmake >)
+  * pygame 
   * PyOpenGL
+  * eel
+  * pymsgbox
 
 You can download all of the libraries above either from PIP or from Christoph Gohlke's excellent website: http://www.lfd.uci.edu/~gohlke/pythonlibs/
 
-You will also have to download the face alignment model from here: http://sourceforge.net/projects/dclib/files/dlib/v18.10/shape_predictor_68_face_landmarks.dat.bz2 and unpack it to the main project directory.
+You will also have to download the face alignment model from here: http://sourceforge.net/projects/dclib/files/dlib/v18.10/shape_predictor_68_face_landmarks.dat.bz2 and unpack it to the FaceSwap > models project directory.
 
-## A faster and more stable version ##
-A faster and more stable version of FaceSwap is available on Dropbox [here](https://www.dropbox.com/sh/yfq0hcu0we2hed0/AABXckFonehfgLfdzicjqqJYa?dl=0). This new version is based on the [Deep Alignment Network](https://github.com/MarekKowalski/DeepAlignmentNetwork) method, which is faster than the currently used method if ran on a GPU and provides more stable and more precise facial landmarks. Please see the [GitHub repository of Deep Alignment Network](https://github.com/MarekKowalski/DeepAlignmentNetwork) for setup instructions.
-
-I hope to find time to include this faster version in the repo code soon.
+**It is already present in the models directory**
+## Process Flow ##
+You can watch the video for the demo of how the application works(click to go to YouTube):
+[![click to go to YouTube](http://img.youtube.com/vi/yZRuSsyxvos/0.jpg)](http://www.youtube.com/watch?v=yZRuSsyxvos)
 
 ## How it works ##
 The general outline of the method is as follows:
