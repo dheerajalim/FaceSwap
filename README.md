@@ -23,8 +23,6 @@ You will also have to download the face alignment model from here: http://source
 
 **It is already present in the models directory**
 ## Process Flow ##
-You can watch the video for the demo of how the application works(click to go to YouTube):
-[![click to go to YouTube](http://img.youtube.com/vi/yZRuSsyxvos/0.jpg)](http://www.youtube.com/watch?v=yZRuSsyxvos)
 
 ## How it works ##
 The general outline of the method is as follows:
@@ -53,18 +51,8 @@ where *s* is the projected shape, *a* is the scaling parameter, *P* are the firs
 
 The model fitting is accomplished by minimizing the difference between the projected shape and the localized landmarks. The minimization is accomplished with respect to the blendshape weights, scaling, rotation and translation, using the [Gauss Newton method](https://en.wikipedia.org/wiki/Gauss%E2%80%93Newton_algorithm).
 
-## Licensing ##
-The code is licensed under the MIT license, some of the data in the project is downloaded from 3rd party websites:
-  * brad pitt.jpg - https://en.wikipedia.org/wiki/Brad_Pitt#/media/File:Brad_Pitt_Fury_2014.jpg
-  * einstein.jpg - https://www.viewfoo.com/uploads/images/702_1433440837_albert-einstein.jpg
-  * jolie.jpg - http://cdni.condenast.co.uk/720x1080/a_c/Angelina-Jolie_glamour_2mar14_rex_b_720x1080.jpg
-  * hand.png - http://pngimg.com/upload/hands_PNG905.png
-  * eye.png - http://cache4.asset-cache.net/xd/521276062.jpg?v=1&c=IWSAsset&k=2&d=62CA815BFB1CE4807BD8B4D34504661CD6D7111452E48A17257DA6DB0BD6EA6DE35742C781328F67
-  * candide 3D face model source - http://www.icg.isy.liu.se/candide/
-  
-## Contact ##
-If need help or you found the app useful, do not hesitate to let me know. 
 
-Marek Kowalski <m.kowalski@ire.pw.edu.pl>, homepage: http://home.elka.pw.edu.pl/~mkowals6/
-  
-  
+## Contact ##
+Please feel free to contribute in enhancing the application.
+
+[Dheeraj Alimchandani](mailto:dheeraj.alim@gmail.com?subject=[GitHub]%20FaceSwap%20Repo)
