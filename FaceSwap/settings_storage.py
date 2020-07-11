@@ -49,7 +49,6 @@ def create_table():
         return True
 
     except Exception as e:
-        print(e)
         return False
 
 
@@ -85,18 +84,17 @@ def fetch_settings():
     result = crsr.fetchall()
 
     if len(result) == 0:
-        print('inside')
+
         create_record("", "", "shape_predictor_68_face_landmarks.dat", "", 0, 0)
 
     crsr.execute("SELECT * FROM settings")
     result = crsr.fetchall()
-    print(result)
+
     close_connection(connection)
 
     result = result[0]
-    print(result)
+
     source_image_path, output_image_path, dlib_model, output_video_path, save_image, save_video = \
         result[1], result[2], result[3], result[4], result[5], result[6]
 
-    print(source_image_path, output_image_path, dlib_model, output_video_path, save_image, save_video)
     return (source_image_path, output_image_path, dlib_model, output_video_path, save_image, save_video)

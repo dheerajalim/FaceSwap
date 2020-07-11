@@ -51,8 +51,6 @@ def load_settings():
     source_image_path, output_image_path, dlib_model, output_video_path, save_image, save_video = \
         settings_storage.fetch_settings()
 
-    print(source_image_path, output_image_path, dlib_model, output_video_path, save_image, save_video)
-
     return (source_image_path, output_image_path, dlib_model, output_video_path, save_image, save_video)
 
 
@@ -80,9 +78,7 @@ def output_dir():
 @eel.expose
 def save_settings(face_location_path_value, dlibmodel, image_output_dir_path_value, video_output_dir_path_value,
                   saveimage, savevideo):
-    print('saved')
-    print(face_location_path_value, dlibmodel, image_output_dir_path_value, video_output_dir_path_value, saveimage,
-          savevideo)
+
     result = settings_storage.create_record(face_location_path_value, image_output_dir_path_value,dlibmodel,
                                             video_output_dir_path_value, saveimage, savevideo)
 
