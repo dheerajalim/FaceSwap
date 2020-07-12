@@ -3,7 +3,19 @@
 The FaceSwap app is inspired from the work of @MarekKowalski. This is built using eel to provide a fully functional User Interface
 .The app is written in Python and uses face alignment, Gauss Newton optimization and image blending to swap the face of a person seen by the camera with a face of a person in a provided image.
 
+## Running FaceSwap executable ##
+Download the faceswap-setup.exe [![click to download]()](https://bit.ly/38MSLVf).
+(Currently supports Windows)
+
+Once downloaded setup the application and play around.
+
+## Demo ##
+[![click to download](http://img.youtube.com/vi/grkg8GMlBGU/0.jpg)](https://youtu.be/grkg8GMlBGU)
+
+
 ## Running FaceSwap ##
+$ pip install -r requirements.txt
+
 $ python start_app.py
 
 ## How to use it ##
