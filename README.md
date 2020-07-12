@@ -4,7 +4,7 @@ The FaceSwap app is inspired from the work of @MarekKowalski. This is built usin
 .The app is written in Python and uses face alignment, Gauss Newton optimization and image blending to swap the face of a person seen by the camera with a face of a person in a provided image.
 
 ## Running FaceSwap executable ##
-Download the faceswap-setup.exe [![click to download]()](https://bit.ly/38MSLVf).
+Download the faceswap-setup.exe [[click to download]](https://bit.ly/38MSLVf).
 (Currently supports Windows)
 
 Once downloaded setup the application and play around.
